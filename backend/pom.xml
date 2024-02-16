@@ -1,0 +1,124 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  
+  	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.6.4</version>
+		<relativePath /> <!-- lookup parent from repository -->
+	</parent>
+  
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>es.unican.tfg</groupId>
+  <artifactId>backend</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+  
+  <properties>
+		<java.version>11</java.version>
+  </properties>
+
+	<repositories>
+    	<repository>
+        	<id>google-maven-repository</id>
+        	<name>Google Maven Repository</name>
+        	<url>https://maven-central.storage.googleapis.com</url>
+   	 	</repository>
+   	 	<repository>
+        	<id>maven-central</id>
+        	<name>Maven Central Repository</name>
+        	<url>https://repo.maven.apache.org/maven2</url>
+        </repository>
+	</repositories>
+
+
+	<dependencies>
+    	<!-- JUnit -->
+    	<dependency>
+    		<groupId>junit</groupId>
+    		<artifactId>junit</artifactId>
+    		<version>4.13.2</version>
+    		<scope>test</scope>
+		</dependency>
+
+    	<dependency>
+    		<groupId>org.mockito</groupId>
+    		<artifactId>mockito-core</artifactId>
+    		<version>4.5.1</version> <!-- Usa la versión más reciente o la que necesites -->
+    		<scope>test</scope>
+		</dependency>
+
+		<dependency>
+    		<groupId>com.google.firebase</groupId>
+    		<artifactId>firebase-admin</artifactId>
+    		<version>9.0.0</version> <!-- Asegúrate de usar la versión más reciente -->
+		</dependency>
+    	<dependency>
+    		<groupId>com.google.api-client</groupId>
+    		<artifactId>google-api-client</artifactId>
+    		<version>[1.31.0,)</version> <!-- Usa la última versión disponible -->
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		
+		<dependency>
+        	<groupId>com.google.http-client</groupId>
+        	<artifactId>google-http-client-jackson2</artifactId>
+        	<version>1.40.0</version> <!-- Reemplaza con la última versión disponible -->
+    	</dependency>
+		
+		<dependency>
+    		<groupId>com.google.api-client</groupId>
+    		<artifactId>google-api-client</artifactId>
+    		<version>1.32.1</version> <!-- Reemplaza con la última versión disponible -->
+		</dependency>
+    	
+    	<dependency>
+        	<groupId>com.google.apis</groupId>
+        	<artifactId>google-api-services-calendar</artifactId>
+        	<version>v3-rev20230602-2.0.0</version>
+    	</dependency>
+    	
+    	<dependency>
+        	<groupId>com.google.oauth-client</groupId>
+        	<artifactId>google-oauth-client-jetty</artifactId>
+        	<version>1.32.1</version>
+    	</dependency>
+		
+		<dependency>
+    		<groupId>joda-time</groupId>
+    		<artifactId>joda-time</artifactId>
+    		<version>2.10.12</version>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		
+		<finalName>ServicioCalendario</finalName>
+		
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+</project>
